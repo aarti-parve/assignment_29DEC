@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC</title>
+</head>
+
+<body>
+    <h3>KBC</h3>
+    <script>
+        var price_amount = "0",
+            score = "0";
+        var question_list = [{
+            'question': "Which subject are you studying?",
+            'option': ["HTML", "CSS", "Javascript", "React"],
+            'correct_answer': "Javascript",
+            // 'price_amount': 1000
+        }, {
+
+            'question': "which is the interpreted launguage ?",
+            'option': ["c", "java", "javascript", "c++"],
+            'correct_answer': "javascript",
+            // 'price_amount': 2000,
+        }, {
+            'question': "who is the founder of the javascript",
+            'option': ["james gosling", "Denish ritiche", "Brendan Eich", "Guido Van Rossum"],
+            'correct_answer': "Brendan Eich",
+            // 'price_amount': 3000,
+        }, {
+            'question': "in which year the javascript is published ",
+            'option': ["1985", "1990", "1995", "1999"],
+            'correct_answer': "1995",
+            // 'price_amount': 5000
+        }];
+
+
+        for (var i = 0; i < question_list.length; i++) {
+            var show_question = question_list[i].question;
+            var show_option = question_list[i].option;
+
+            if (show_question == question_list[i].correct_answer) {
+                console.log("correct answer!");
+                prizeMoney += 1000;
+                score++;
+            } else {
+                console.log("wrong answer!");
+                break;
+            }
+        }
+
+        console.log(question_list);
+    </script>
+</body>
+
+
+</html>
